@@ -109,6 +109,21 @@
       letter-spacing: 0.01em; transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--gold); }
+    .has-dropdown { position: relative; }
+    .dropdown {
+      display: none; position: absolute; top: 100%; left: 0;
+      background: var(--white); border: 1px solid rgba(0,0,0,0.1);
+      border-top: 3px solid var(--gold); min-width: 180px;
+      list-style: none; box-shadow: 0 8px 24px rgba(0,0,0,0.1); z-index: 200;
+    }
+    .has-dropdown:hover .dropdown { display: block; }
+    .dropdown li a {
+      display: block; padding: 10px 16px; font-size: 13px;
+      color: var(--ink-mid); border-bottom: 1px solid rgba(0,0,0,0.07);
+      transition: background 0.15s, color 0.15s;
+    }
+    .dropdown li:last-child a { border-bottom: none; }
+    .dropdown li a:hover { background: #fdf3e7; color: var(--gold); }
     .nav-phone {
       font-size: 15px; font-weight: 600;
       color: var(--ink); text-decoration: none;
@@ -695,13 +710,21 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo">
-    <img src="assets/logo.png" alt="Vanguard Realty Group" />
+    <a href="index.html"><img src="assets/logo.png" alt="Vanguard Realty Group" /></a>
   </div>
   <ul class="nav-links">
-    <li><a href="#">Residential</a></li>
-    <li><a href="#">Commercial</a></li>
-    <li><a href="#">Our Team</a></li>
-    <li><a href="#">Contact</a></li>
+    <li class="has-dropdown">
+      <a href="commercial/index.html">Commercial ▾</a>
+      <ul class="dropdown">
+        <li><a href="commercial/office/index.html">Office Space</a></li>
+        <li><a href="commercial/industrial/index.html">Industrial</a></li>
+        <li><a href="commercial/retail/index.html">Retail</a></li>
+        <li><a href="commercial/multi-family/index.html">Multi-Family</a></li>
+      </ul>
+    </li>
+    <li><a href="residential/index.html">Residential</a></li>
+    <li><a href="team/index.html">Our Team</a></li>
+    <li><a href="contact/index.html">Contact</a></li>
   </ul>
   <a href="tel:5419799929" class="nav-phone">541-979-9929</a>
 </nav>
