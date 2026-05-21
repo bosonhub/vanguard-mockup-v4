@@ -83,43 +83,20 @@
 </div>
 
 <section class="listings-section">
-  <div style="max-width:1200px; margin:0 auto 40px; padding-bottom:24px; border-bottom:1px solid var(--rule);">
-    <div class="section-kicker">Multi-Family — Corvallis &amp; Albany, Oregon</div>
-    <h2 class="section-title">Active Multi-Family Listings</h2>
+  <div style="max-width:1200px; margin:0 auto 32px; display:flex; justify-content:space-between; align-items:flex-end; padding-bottom:24px; border-bottom:1px solid var(--rule);">
+    <div>
+      <div class="section-kicker">Live from Crexi — Multi-Family</div>
+      <h2 class="section-title">Active Multi-Family Listings</h2>
+    </div>
+    <a href="https://www.crexi.com/profile/brian-weinhold-brianweinho" target="_blank" class="btn-outline">View All on Crexi →</a>
   </div>
-  <div class="listings-grid">
-    <div class="listing-card">
-      <div class="listing-img">[ PROPERTY PHOTO — CONTENT NEEDED ]</div>
-      <div class="listing-body">
-        <span class="listing-status status-sale">For Sale</span>
-        <div class="listing-name">[ MULTI-FAMILY LISTING ]</div>
-        <div class="listing-addr">[ ADDRESS ], Corvallis, OR</div>
-        <div class="listing-price">[ PRICE ]</div>
-        <div class="listing-meta"><span>Multi-Family</span><span>[ UNITS ] Units</span></div>
-      </div>
-    </div>
-    <div class="listing-card">
-      <div class="listing-img">[ PROPERTY PHOTO — CONTENT NEEDED ]</div>
-      <div class="listing-body">
-        <span class="listing-status status-sale">For Sale</span>
-        <div class="listing-name">[ MULTI-FAMILY LISTING ]</div>
-        <div class="listing-addr">[ ADDRESS ], Albany, OR</div>
-        <div class="listing-price">[ PRICE ]</div>
-        <div class="listing-meta"><span>Multi-Family</span><span>[ UNITS ] Units</span></div>
-      </div>
-    </div>
-    <div class="listing-card">
-      <div class="listing-img">[ PROPERTY PHOTO — CONTENT NEEDED ]</div>
-      <div class="listing-body">
-        <span class="listing-status status-sale">For Sale</span>
-        <div class="listing-name">[ MULTI-FAMILY LISTING ]</div>
-        <div class="listing-addr">[ ADDRESS ]</div>
-        <div class="listing-price">[ PRICE ]</div>
-        <div class="listing-meta"><span>Multi-Family</span><span>[ UNITS ] Units</span></div>
-      </div>
-    </div>
+  <div class="listings-grid" id="listings-grid">
+    <div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--ink-soft);">Loading listings…</div>
   </div>
+  <p style="max-width:1200px; margin:20px auto 0; font-size:12px; color:var(--ink-soft); text-align:center;">Data sourced from <a href="https://www.crexi.com" target="_blank" style="color:var(--gold);">Crexi.com</a>. All information deemed reliable but not guaranteed.</p>
 </section>
+<script src="../../assets/listings-filter.js"></script>
+<script>initListings('multi-family','../../listings.json','listings-grid','https://www.crexi.com/profile/brian-weinhold-brianweinho');</script>
 
 <div class="cta-strip">
   <div class="section-kicker" style="color:var(--gold-lt);">Multi-Family Investment</div>

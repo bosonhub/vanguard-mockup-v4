@@ -11,6 +11,7 @@
   "listings": [
     {
       "type": "For Sale",
+      "category": ["industrial"],
       "name": "Groome Transport",
       "price": "$1,250,000",
       "address": "34030 Excor Rd SW, Albany, OR 97321",
@@ -21,6 +22,7 @@
     },
     {
       "type": "For Sale",
+      "category": ["land"],
       "name": "201 Roberts Creek Rd. (Lot 3)",
       "price": "$225,000",
       "address": "201 Roberts Creek Rd, Roseburg, OR 97471",
@@ -31,6 +33,7 @@
     },
     {
       "type": "For Sale",
+      "category": ["land"],
       "name": "4807 SW Grange Rd. (Lot 2)",
       "price": "$250,000",
       "address": "4807 SW Grange Rd, Roseburg, OR 97471",
@@ -41,6 +44,7 @@
     },
     {
       "type": "For Sale",
+      "category": ["land"],
       "name": "4885 SW Grange Road (Lot 1)",
       "price": "$225,000",
       "address": "4885 SW Grange Rd, Roseburg, OR 97471",
@@ -51,6 +55,7 @@
     },
     {
       "type": "For Sale",
+      "category": ["industrial"],
       "name": "Kammerer Industrial Park",
       "price": "$5,500,000",
       "address": "720 NE Granger Ave, Corvallis, OR 97330",
@@ -61,6 +66,7 @@
     },
     {
       "type": "For Lease",
+      "category": ["retail", "office"],
       "name": "520 SW 3rd Avenue",
       "price": "$10.40/SF/YR",
       "address": "520 SW 3rd Ave, Albany, OR 97321",
@@ -72,6 +78,7 @@
     },
     {
       "type": "For Lease",
+      "category": ["industrial"],
       "name": "Kammerer Industrial Park Bldg J North",
       "price": "$15/SF/YR",
       "address": "720 NE Granger Ave, Corvallis, OR 97330",
@@ -83,6 +90,7 @@
     },
     {
       "type": "For Lease",
+      "category": ["retail", "office"],
       "name": "2115 Pacific Blvd SW",
       "price": "$16/SF/YR",
       "address": "2115 Pacific Blvd SW, Albany, OR 97321",
@@ -94,6 +102,7 @@
     },
     {
       "type": "For Lease",
+      "category": ["retail"],
       "name": "108 Clover Leaf Loop",
       "price": "$14/SF/YR",
       "address": "104 Clover Leaf Loop, Sutherlin, OR 97479",
