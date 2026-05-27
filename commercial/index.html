@@ -278,6 +278,114 @@
 })();
 </script>
 
+<!-- INVESTMENT CALCULATOR -->
+<section style="background:var(--cream); padding:80px 52px; border-top:3px solid var(--gold);">
+  <div style="max-width:900px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:48px;">
+      <div class="section-kicker">Investment Analysis Tool</div>
+      <h2 class="section-title">Cap Rate &amp; NOI Calculator</h2>
+      <p style="font-size:15px; color:var(--ink-soft); max-width:560px; margin:0 auto; line-height:1.7;">Analyze a commercial property's potential return before you make a move. Enter the numbers below and we'll calculate the cap rate and net operating income instantly.</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;">
+
+      <!-- INPUTS -->
+      <div style="background:var(--white); padding:40px; border:1px solid var(--rule); border-top:3px solid var(--gold);">
+        <div style="font-family:'Fraunces',serif; font-size:18px; font-weight:700; color:var(--ink); margin-bottom:28px;">Property Details</div>
+
+        <div style="margin-bottom:20px;">
+          <label style="display:block; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-mid); margin-bottom:8px;">Purchase Price ($)</label>
+          <input id="calc-price" type="number" placeholder="e.g. 1250000" oninput="calcROI()" style="width:100%; padding:12px 14px; font-size:15px; border:1.5px solid var(--rule); background:var(--cream); color:var(--ink); outline:none; box-sizing:border-box; font-family:'DM Sans',sans-serif;" />
+        </div>
+
+        <div style="margin-bottom:20px;">
+          <label style="display:block; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-mid); margin-bottom:8px;">Annual Gross Income ($)</label>
+          <input id="calc-income" type="number" placeholder="e.g. 120000" oninput="calcROI()" style="width:100%; padding:12px 14px; font-size:15px; border:1.5px solid var(--rule); background:var(--cream); color:var(--ink); outline:none; box-sizing:border-box; font-family:'DM Sans',sans-serif;" />
+          <div style="font-size:12px; color:var(--ink-soft); margin-top:5px;">Total rent collected before expenses</div>
+        </div>
+
+        <div style="margin-bottom:28px;">
+          <label style="display:block; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-mid); margin-bottom:8px;">Annual Operating Expenses ($)</label>
+          <input id="calc-expenses" type="number" placeholder="e.g. 30000" oninput="calcROI()" style="width:100%; padding:12px 14px; font-size:15px; border:1.5px solid var(--rule); background:var(--cream); color:var(--ink); outline:none; box-sizing:border-box; font-family:'DM Sans',sans-serif;" />
+          <div style="font-size:12px; color:var(--ink-soft); margin-top:5px;">Taxes, insurance, maintenance, management</div>
+        </div>
+
+        <div style="font-size:12px; color:var(--ink-soft); padding-top:16px; border-top:1px solid var(--rule); line-height:1.6;">
+          <strong style="color:var(--ink);">Not sure about expenses?</strong> A common rule of thumb for commercial property is 30–40% of gross income. For NNN leases, tenant pays most expenses — use a lower figure.
+        </div>
+      </div>
+
+      <!-- RESULTS -->
+      <div>
+        <div style="background:var(--ink); color:var(--white); padding:40px; margin-bottom:16px;">
+          <div style="font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:8px;">Net Operating Income</div>
+          <div id="result-noi" style="font-family:'Fraunces',serif; font-size:42px; font-weight:700; color:var(--white); line-height:1;">—</div>
+          <div style="font-size:13px; color:rgba(255,255,255,0.5); margin-top:6px;">Annual income after operating expenses</div>
+        </div>
+
+        <div style="background:var(--gold); color:var(--white); padding:40px; margin-bottom:16px;">
+          <div style="font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.75); margin-bottom:8px;">Cap Rate</div>
+          <div id="result-cap" style="font-family:'Fraunces',serif; font-size:42px; font-weight:700; color:var(--white); line-height:1;">—</div>
+          <div style="font-size:13px; color:rgba(255,255,255,0.75); margin-top:6px;">NOI ÷ Purchase Price</div>
+        </div>
+
+        <div style="background:var(--cream); border:1px solid var(--rule); padding:24px;">
+          <div style="font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-mid); margin-bottom:10px;">What does this mean?</div>
+          <div id="result-context" style="font-size:14px; color:var(--ink-soft); line-height:1.7;">Enter the property details to the left and we'll explain what the numbers mean for this market.</div>
+        </div>
+
+        <div style="margin-top:20px; text-align:center;">
+          <a href="../contact/index.html" class="btn-dark" style="display:inline-block; background:var(--ink); color:var(--white); padding:14px 28px; font-size:13px; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; text-decoration:none;">Discuss This Property with an Agent →</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:32px; padding:20px 24px; background:var(--white); border-left:3px solid var(--gold); font-size:13px; color:var(--ink-soft); line-height:1.7;">
+      <strong style="color:var(--ink);">Glossary:</strong>
+      <strong>Cap Rate</strong> (Capitalization Rate) — the ratio of a property's net operating income to its purchase price, expressed as a percentage. A higher cap rate generally means higher return but higher risk.
+      &nbsp;·&nbsp; <strong>NOI</strong> (Net Operating Income) — gross income minus operating expenses, before debt service.
+      &nbsp;·&nbsp; <strong>NNN Lease</strong> — a lease where the tenant pays property taxes, insurance, and maintenance in addition to rent.
+    </div>
+  </div>
+</section>
+
+<script>
+function calcROI() {
+  const price = parseFloat(document.getElementById('calc-price').value) || 0;
+  const income = parseFloat(document.getElementById('calc-income').value) || 0;
+  const expenses = parseFloat(document.getElementById('calc-expenses').value) || 0;
+
+  const noi = income - expenses;
+  const capRate = price > 0 ? (noi / price) * 100 : null;
+
+  const noiEl = document.getElementById('result-noi');
+  const capEl = document.getElementById('result-cap');
+  const ctxEl = document.getElementById('result-context');
+
+  if (!price && !income && !expenses) {
+    noiEl.textContent = '—'; capEl.textContent = '—';
+    ctxEl.textContent = 'Enter the property details to the left and we\'ll explain what the numbers mean for this market.';
+    return;
+  }
+
+  noiEl.textContent = noi >= 0 ? '$' + noi.toLocaleString() : '-$' + Math.abs(noi).toLocaleString();
+
+  if (capRate !== null) {
+    capEl.textContent = capRate.toFixed(2) + '%';
+    let context = '';
+    if (capRate < 4) context = 'A cap rate under 4% is on the low end — typical of premium urban assets or very low-risk properties. In the Corvallis/Albany market, this would be considered a strong, stable asset.';
+    else if (capRate < 6) context = 'A cap rate of ' + capRate.toFixed(1) + '% is in the moderate range — solid for a well-located commercial property in the Willamette Valley. This is a reasonable return for a stabilized asset.';
+    else if (capRate < 8) context = 'A cap rate of ' + capRate.toFixed(1) + '% is healthy for this market. This suggests a good return relative to risk — worth a closer look. Talk to an agent about what\'s driving the income.';
+    else if (capRate < 12) context = 'A cap rate of ' + capRate.toFixed(1) + '% is on the higher end — potentially strong upside, but worth understanding why. Higher cap rates can reflect vacancy risk, deferred maintenance, or a value-add opportunity.';
+    else context = 'A cap rate above 12% is unusually high. This may indicate significant risk, high vacancy, or a distressed asset — but it could also be a value-add opportunity worth exploring with a broker.';
+    ctxEl.textContent = context;
+  } else {
+    capEl.textContent = '—';
+    ctxEl.textContent = 'Enter a purchase price to calculate the cap rate.';
+  }
+}
+</script>
+
 <!-- CTA -->
 <div class="cta-strip">
   <div class="section-kicker" style="color:var(--gold-lt);">Ready to Move?</div>
